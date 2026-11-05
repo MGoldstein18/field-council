@@ -31,14 +31,6 @@ export const stateCodes =
   "AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY".split(
     " ",
   );
-export const statuses = {
-  received: "Received",
-  reviewing: "Reviewing",
-  call_invited: "Call invited",
-  waiting_for_match: "Waiting for a match",
-  invited: "Membership offered",
-  closed: "Closed",
-} as const;
 export const applicationSchema = z.object({
   submissionKey: z.string().uuid(),
   fullName: z.string().trim().min(2, "Please enter your full name.").max(100),
@@ -86,30 +78,3 @@ export const applicationSchema = z.object({
   fax: z.string().max(200).default(""),
 });
 export type ApplicationInput = z.infer<typeof applicationSchema>;
-export type ApplicationRow = {
-  id: string;
-  createdAt: number;
-  updatedAt: number;
-  fullName: string;
-  email: string;
-  phone: string;
-  role: string;
-  company: string;
-  website: string;
-  city: string;
-  state: string;
-  serviceArea: string;
-  revenue: string;
-  team: string;
-  services: string;
-  challenge: string;
-  sharing: string;
-  status: string;
-  notes: string;
-  source: string;
-};
-export function csvCell(value: unknown) {
-  let text = String(value ?? "");
-  if (/^[\s]*[=+@-]/.test(text)) text = "'" + text;
-  return '"' + text.replaceAll('"', '""') + '"';
-}

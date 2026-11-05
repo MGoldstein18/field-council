@@ -166,16 +166,16 @@ export default function ApplicationForm() {
         };
       } catch {
         throw new Error(
-          "We could not confirm your application was saved. Please try again.",
+          "We could not confirm your application was sent. Please try again.",
         );
       }
       if (!response.ok)
         throw new Error(
-          data.error || "We could not save your application. Please try again.",
+          data.error || "We could not send your application. Please try again.",
         );
       if (!data.reference)
         throw new Error(
-          "We could not confirm your application was saved. Please try again.",
+          "We could not confirm your application was sent. Please try again.",
         );
       setReference(data.reference);
       window.scrollTo({ top: 60, behavior: "smooth" });
@@ -183,7 +183,7 @@ export default function ApplicationForm() {
       setError(
         err instanceof Error
           ? err.message
-          : "Your application was not saved. Please try again.",
+          : "Your application was not sent. Please try again.",
       );
     } finally {
       setBusy(false);
@@ -203,8 +203,8 @@ export default function ApplicationForm() {
         </h1>
         <p>
           Thanks, {v.fullName.split(" ")[0]}. Your application for{" "}
-          <strong>{v.company}</strong> has been saved to the founding-member
-          review list.
+          <strong>{v.company}</strong> has been sent to the organiser for
+          review.
         </p>
         <ol>
           <li>We review your firm, service area and goals.</li>
@@ -405,8 +405,9 @@ export default function ApplicationForm() {
                   onChange={(e) => set("consent", e.target.checked)}
                 />
                 <span>
-                  I agree that Field Council may store these details and contact
-                  me about my application and group formation. I have read the{" "}
+                  I agree that Field Council may receive these details by email
+                  and contact me about my application and group formation. I
+                  have read the{" "}
                   <Link href="/privacy" target="_blank" rel="noopener">
                     privacy & application information
                   </Link>
@@ -457,7 +458,7 @@ export default function ApplicationForm() {
               disabled={busy || (step === 2 && !key)}
             >
               {busy
-                ? "Saving your application…"
+                ? "Sending your application…"
                 : step === 2
                   ? "Submit application"
                   : "Continue"}

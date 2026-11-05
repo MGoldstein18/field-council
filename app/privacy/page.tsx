@@ -23,9 +23,9 @@ export default function Privacy() {
           Your name, contact details, company, role, location, service area,
           broad revenue and team-size bands, services, business question and
           willingness to share financial summaries privately. Website and phone
-          are optional. We also record the application date, contact consent,
-          review status, organiser notes and any campaign reference supplied
-          with the link.
+          are optional. The email also includes your contact consent, an
+          application reference and any campaign reference supplied with the
+          link.
         </p>
         <h2>How the information is used</h2>
         <p>
@@ -37,20 +37,19 @@ export default function Privacy() {
         </p>
         <h2>Storage and access</h2>
         <p>
-          Applications are stored in a private PostgreSQL database. The
-          organiser’s review area requires authorised sign-in. Application
-          records are not published to other applicants or shared with a
-          proposed group without discussing that with you first. Hosting
-          services process information needed to operate the site. No
-          advertising pixels are included.
+          Applications are sent through Resend to the organiser’s email inbox.
+          This website does not maintain an application database or admin
+          dashboard. The email service and inbox provider process and may retain
+          the message and delivery records. Applications are not published to
+          other applicants or shared with a proposed group without discussing
+          that with you first. No advertising pixels are included.
         </p>
         <h2>Application security</h2>
         <p>
           Please do not submit accounts, client names, bank details or other
-          sensitive records. When available, a temporary hash of a connection
-          identifier is used to limit automated submissions; these rate-limit
-          records are cleared after 24 hours during subsequent application or
-          login activity.
+          sensitive records. A temporary hash of a connection identifier is used
+          for per-instance submission limits. These counters expire after an
+          hour and are not stored in a database.
         </p>
         <h2>Your choices</h2>
         <p>
@@ -61,7 +60,7 @@ export default function Privacy() {
         </p>
         <h2>Contact details</h2>
         <p>
-          <strong>Placeholder for launch:</strong> organiser contact email and
+          <strong>Placeholder for launch:</strong> public contact details and a
           scheduling link have not yet been supplied. This preview does not
           contain a working public contact address or automated call booking.
         </p>

@@ -1,10 +1,9 @@
-import { eq, desc } from "drizzle-orm";
-import { getDb } from "../../../db";
-import { applications } from "../../../db/schema";
+import { applicationSchema } from "../../../lib/application";
+import { sameOrigin, privateHeaders } from "../../../lib/http";
 import { allowRequest } from "../../../lib/rate-limit";
-import { applicationSchema, csvCell } from "../../../lib/application";
-import { isAdmin, privateHeaders, sameOrigin } from "../../../lib/admin";
+import { sendApplicationEmail } from "../../../lib/email";
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 const json = (data: unknown, status = 200) =>
   Response.json(data, { status, headers: privateHeaders });
 export async function POST(request: Request) {
@@ -44,146 +43,23 @@ export async function POST(request: Request) {
         },
         400,
       );
-    const p = parsed.data;
-    const db = getDb();
-    // Retries with the same client-generated key acknowledge the existing record without modifying it.
-    const [existing] = await db
-      .select({ id: applications.id })
-      .from(applications)
-      .where(eq(applications.submissionKey, p.submissionKey))
-      .limit(1);
-    if (existing) return json({ reference: existing.id }, 200);
-    const now = Date.now();
-    if (!(await allowRequest(request, "application", 6, 3600000)))
+    if (!allowRequest(request))
       return json(
         {
           error:
-            "Too many applications from this connection. Please try again in an hour.",
+            "Too many attempts from this connection. Please try again in an hour.",
         },
         429,
       );
-    const id = crypto.randomUUID();
-    const {
-      submissionKey,
-      fullName,
-      email,
-      phone,
-      role,
-      company,
-      website,
-      city,
-      state,
-      serviceArea,
-      revenue,
-      team,
-      challenge,
-      sharing,
-      source,
-    } = p;
-    const inserted = await db
-      .insert(applications)
-      .values({
-        id,
-        submissionKey,
-        createdAt: now,
-        updatedAt: now,
-        fullName,
-        email,
-        phone,
-        role,
-        company,
-        website,
-        city,
-        state,
-        serviceArea,
-        revenue,
-        team,
-        services: JSON.stringify(p.services),
-        challenge,
-        sharing,
-        source,
-        consentVersion: "2026-11-05-v1",
-      })
-      .onConflictDoNothing({ target: applications.submissionKey })
-      .returning({ id: applications.id });
-    if (!inserted.length) {
-      const [old] = await db
-        .select({ id: applications.id })
-        .from(applications)
-        .where(eq(applications.submissionKey, p.submissionKey))
-        .limit(1);
-      if (!old) throw new Error("Save unavailable");
-      return json({ reference: old.id }, 200);
-    }
-    return json({ reference: id }, 201);
+    const reference = await sendApplicationEmail(parsed.data);
+    return json({ reference }, 201);
   } catch {
-    console.error("Application submission failed");
+    console.error("Application email could not be confirmed");
     return json(
       {
         error:
-          "We could not save your application. Your details are still on this page. Please try again.",
+          "We could not confirm your application was sent. Your details are still on this page. Please try again.",
       },
-      503,
-    );
-  }
-}
-export async function GET(request: Request) {
-  if (!(await isAdmin())) return json({ error: "Owner access required." }, 403);
-  try {
-    const rows = await getDb()
-      .select()
-      .from(applications)
-      .orderBy(desc(applications.createdAt))
-      .limit(5000);
-    if (new URL(request.url).searchParams.get("format") === "csv") {
-      const keys = [
-        "id",
-        "createdAt",
-        "fullName",
-        "email",
-        "phone",
-        "role",
-        "company",
-        "website",
-        "city",
-        "state",
-        "serviceArea",
-        "revenue",
-        "team",
-        "services",
-        "challenge",
-        "sharing",
-        "status",
-        "notes",
-        "source",
-      ] as const;
-      const csv = [
-        keys.map(csvCell).join(","),
-        ...rows.map((row) =>
-          keys
-            .map((k) =>
-              csvCell(
-                k === "createdAt"
-                  ? new Date(row.createdAt).toISOString()
-                  : row[k],
-              ),
-            )
-            .join(","),
-        ),
-      ].join("\r\n");
-      return new Response("\uFEFF" + csv, {
-        headers: {
-          ...privateHeaders,
-          "Content-Type": "text/csv; charset=utf-8",
-          "Content-Disposition":
-            'attachment; filename="field-council-applications.csv"',
-        },
-      });
-    }
-    return json({ applications: rows });
-  } catch {
-    return json(
-      { error: "Applications could not be loaded. Please try again." },
       503,
     );
   }
