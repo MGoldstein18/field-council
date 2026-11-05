@@ -226,13 +226,14 @@ export default function ApplicationForm() {
       <div className="form-intro">
         <p className="eyebrow">THE FOUNDING COUNCIL · APPLICATION</p>
         <h1>
-          Let’s find your
+          A good council starts
           <br />
-          <em>common ground.</em>
+          <em>with your firm.</em>
         </h1>
         <p>
-          Tell us a little about your firm and the decisions on your desk. We’ll
-          use this to explore the right group for you.
+          Tell us about your business and the decision you’d like to talk
+          through with other owners. We’ll review the fit and contact potential
+          members for a conversation. Applying is free.
         </p>
       </div>
       <div className="application-layout">

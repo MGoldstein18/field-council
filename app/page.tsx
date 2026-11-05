@@ -4,52 +4,52 @@ import MarginIllustration from "./margin-illustration";
 const questions = [
   [
     "01",
-    "Are we pricing the work properly?",
-    "Compare how other owners think about estimating, scope creep and the jobs that look better on paper.",
+    "Are we busy—or actually profitable?",
+    "Put revenue, direct labour and overhead into the same conversation. Compare how other owners read their numbers, and ask better questions of your own.",
   ],
   [
     "02",
-    "Is the team as productive as it could be?",
-    "Get another perspective on field crews, office capacity, hiring and the handoff between them.",
+    "Is another hire the right move?",
+    "Talk through capacity, responsibilities and the cost of adding a crew or a manager before you take on the overhead.",
   ],
   [
     "03",
-    "Where does the profit actually go?",
-    "Work through overhead, owner time, equipment and cash collection with people who understand the business.",
+    "Why does everything still come back to me?",
+    "Estimating. Client calls. Hiring. Quality control. Work through the handoffs that could give your team more responsibility and you more room to lead.",
   ],
 ];
 const faqs = [
   [
-    "Is this a surveying association?",
-    "Field Council is a new, independent business peer group for surveying firm owners. The focus is running the company: financial performance, people, operations and the decisions on your desk. It is not affiliated with NSPS, ACEC or another professional association.",
+    "Who would be in my council?",
+    "Owners and operating partners of independent US land-surveying firms. We’re starting with established businesses around $1m–$10m in annual revenue, often with several field crews. We review business stage, service mix and market overlap before proposing a group.",
   ],
   [
-    "Who is a good fit?",
-    "We are looking for owners and operating partners of established US land-surveying firms, particularly businesses with several field crews and approximately $1m–$10m in annual revenue. Those are starting guidelines. The application helps us understand your service mix, stage and goals.",
+    "How do you handle competing firms?",
+    "We review where you work, the services you offer and the projects you compete for. Geography is part of the check, but it isn’t the whole check. Potential conflicts are discussed before you accept a place.",
   ],
   [
-    "Will my local competitors be in the room?",
-    "We review service areas and business overlap before matching a group. Geographic separation alone may not be enough: we also consider the clients and projects you compete for. You can discuss a potential conflict before accepting a place.",
+    "What would I need to share?",
+    "Come prepared to discuss your business openly and share an agreed financial summary under a confidentiality agreement. The group needs common definitions to make comparisons useful. We agree the scope before meetings begin; the application asks for broad business bands, never accounts or client records.",
   ],
   [
-    "What information would I share?",
-    "The intended format uses a standardised financial summary and operating measures, shared privately under a confidentiality agreement. We agree the scope with members before the first meeting. Your application asks for broad business information only; please do not submit accounts or client information.",
+    "What does membership cost?",
+    "The proposed founding price is US$4,500 per year, plus your travel and accommodation. That covers the planned two in-person meetings, six virtual working sessions, shared financial review format, private group access, meeting rooms and meeting-day catering. You’ll receive the facilitator details, dates and final terms before deciding or paying.",
   ],
   [
-    "How much will membership cost?",
-    "The proposed founding membership is US$4,500 per year, plus your travel and accommodation. The intended format includes two in-person meetings, six virtual working sessions, financial preparation and ongoing group access. Final dates, facilitator, venue details and terms will be confirmed before you decide or pay.",
+    "Is the founding council already running?",
+    "We’re recruiting the first group now. The facilitator, meeting dates and launch plans are still being finalised. Applying starts a conversation about fit; it does not purchase a membership or guarantee a place. We will confirm the full plan with prospective members before enrolment.",
   ],
   [
     "What happens after I apply?",
-    "Your application joins our founding-member review list. We review your business and potential group fit, then contact suitable applicants about a conversation. If there is a compatible group, you receive the details and can decide whether to join. Applying is free and does not commit you to membership.",
+    "Your application is emailed privately to the organiser. We review your firm and territory, then contact potential members for a fit conversation. If we can put together a compatible group, you receive the membership details and decide whether to join. There is no payment or commitment when you apply.",
   ],
   [
-    "When does the first group start?",
-    "We are forming the first group now. A launch date depends on finding compatible members and confirming the facilitator and meeting plans. There is no announced start date yet. We will keep applicants informed as the group takes shape.",
+    "How is this different from a professional association?",
+    "The focus is the business you own: its numbers, people, operations and the decisions you’re responsible for. You work with a small, continuing group of owners. Field Council is independent and is not affiliated with NSPS, ACEC or another professional association.",
   ],
   [
-    "Are the meetings recorded or used for content?",
-    "Financial discussions are intended to stay private. Any public interview, podcast or case study would require a separate, optional agreement. Applying or joining would not give us permission to publish your business information.",
+    "Are meetings recorded or used for podcasts?",
+    "Financial discussions are intended to stay private. A public interview, podcast or case study would always need a separate, optional agreement. Applying or joining does not give us permission to publish your business information.",
   ],
 ];
 export default function Home() {
@@ -60,30 +60,32 @@ export default function Home() {
         <section className="hero wrap">
           <div className="hero-copy">
             <p className="eyebrow">
-              <span className="live-dot" /> FOUNDING COUNCIL · NOW FORMING
+              <span className="live-dot" /> FOR US SURVEYING OWNERS · FOUNDING
+              GROUP FORMING
             </p>
             <h1>
-              You know
+              You run the firm.
               <br />
-              your land.
+              You don’t have to
               <br />
-              <em>Know your business.</em>
+              <em>figure it out alone.</em>
             </h1>
             <p className="hero-description">
-              A private peer group for independent surveying firm owners. Open
-              the books. Compare notes. Make your next big decision with better
-              company.
+              A private peer council of 10–12 independent surveying firm owners.
+              Compare your numbers. Work through the decisions you can’t hand
+              off. Build relationships with owners who understand the business
+              behind the fieldwork.
             </p>
             <div className="hero-actions">
               <Link href="/apply" className="button">
-                Apply for the founding group <Arrow />
+                Apply to join <Arrow />
               </Link>
               <a href="#the-council" className="quiet-link">
-                Take a look inside <span>↓</span>
+                See how it works <span>↓</span>
               </a>
             </div>
             <p className="micro hero-note">
-              For US surveying owners. Free to apply. No commitment.
+              For established firms around $1m–$10m revenue. Free to apply.
             </p>
           </div>
           <div
@@ -93,7 +95,7 @@ export default function Home() {
             <div className="map-sheet">
               <div className="map-top">
                 <span>FIELD NOTES / 001</span>
-                <span>INDEPENDENT PERSPECTIVE</span>
+                <span>THE BUSINESS BEHIND THE FIELDWORK</span>
               </div>
               <SurveyMap />
               <div className="map-bottom">
@@ -107,18 +109,18 @@ export default function Home() {
               </div>
               <div className="table-diagram" aria-hidden="true">
                 <div className="table-center">
-                  A seat at
+                  Your firm.
                   <br />
-                  <em>your table.</em>
+                  <em>Your council.</em>
                 </div>
                 {Array.from({ length: 12 }, (_, i) => (
                   <span className={`seat seat-${i}`} key={i} />
                 ))}
               </div>
               <p>
-                A small group.
+                Same profession.
                 <br />
-                <strong>A broader perspective.</strong>
+                <strong>Different markets.</strong>
               </p>
               <div className="card-bottom">
                 <span>OWNERS ONLY</span>
@@ -126,7 +128,7 @@ export default function Home() {
               </div>
             </div>
             <span className="visual-annotation">
-              Good businesses aren’t built alone.
+              People you can talk numbers with.
             </span>
           </div>
         </section>
@@ -139,7 +141,7 @@ export default function Home() {
               <i>02</i> Separate markets
             </span>
             <span>
-              <i>03</i> Real business conversations
+              <i>03</i> Compare the numbers
             </span>
             <span>
               <i>04</i> Confidential by design
@@ -148,27 +150,25 @@ export default function Home() {
         </div>
         <section className="section wrap problem" id="why">
           <div>
-            <p className="eyebrow">
-              THE PART THEY DON’T TEACH YOU IN THE FIELD
-            </p>
+            <p className="eyebrow">THE DECISIONS THAT FOLLOW YOU HOME</p>
             <h2>
-              Who do you talk to
+              A busy firm.
               <br />
-              about <em>the business?</em>
+              <em>Some hard questions.</em>
             </h2>
           </div>
           <div className="problem-copy">
             <p>
-              You can solve a complicated boundary. Running the company brings a
-              different set of questions.
+              You’re responsible for the work, the team and the bottom line. But
+              when it’s time to raise prices, add a crew or step back from the
+              day-to-day, who do you talk it through with?
             </p>
             <p>
-              What should a crew produce? Is another hire the right move? Are
-              growing revenues turning into better profits—or just longer days?
+              Some conversations are hard to have with your team. Others need
+              someone who has carried a payroll, managed field crews and dealt
+              with the same client pressures.
             </p>
-            <p className="problem-last">
-              It helps to have other owners at the table.
-            </p>
+            <p className="problem-last">That’s the room we’re building.</p>
           </div>
           <div className="question-list">
             {questions.map(([n, t, b]) => (
@@ -189,38 +189,39 @@ export default function Home() {
           <div className="wrap section">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">A WORKING GROUP FOR WORKING OWNERS</p>
+                <p className="eyebrow">
+                  YOUR NUMBERS. YOUR DECISIONS. YOUR COUNCIL.
+                </p>
                 <h2>
-                  Bring your numbers.
+                  Bring a real decision.
                   <br />
-                  Leave with <em>perspective.</em>
+                  <em>Give it a proper hearing.</em>
                 </h2>
               </div>
               <p>
-                The proposed founding format.
+                The same small group, meeting throughout the year.
                 <br />
-                Small enough for everyone to be heard.
-                <br />
-                Specific enough to be useful.
+                Time to understand the numbers, challenge assumptions and work
+                out what to do next.
               </p>
             </div>
             <div className="format-grid">
               <article className="format-main">
-                <span className="label">THE ROOM</span>
+                <span className="label">THE PEOPLE AROUND YOU</span>
                 <div className="format-big">
                   10–12<span>owners. One council.</span>
                 </div>
                 <p>
-                  Owners and operating partners, matched by business stage and
-                  service mix, with competitive overlap reviewed before a place
-                  is offered.
+                  Owners and operating partners running firms with similar
+                  challenges. We review business stage, service mix and market
+                  overlap so the group can have useful, candid conversations.
                 </p>
                 <div className="mini-diagram" aria-hidden="true">
-                  <span>YOUR FIRM</span>
+                  <span>YOUR NUMBERS</span>
                   <i />
                   <span>YOUR PEERS</span>
                   <i />
-                  <span>A BETTER VIEW</span>
+                  <span>YOUR NEXT STEP</span>
                 </div>
               </article>
               <div className="format-side">
@@ -228,11 +229,11 @@ export default function Home() {
                   <span className="label">IN PERSON</span>
                   <strong>02</strong>
                   <div>
-                    <h3>Step out. Work on the company.</h3>
+                    <h3>Time to open the books.</h3>
                     <p>
-                      Two intended in-person meetings each year, with time for
-                      financial reviews, owner conversations and the
-                      relationships between them.
+                      Two in-person working meetings each year. Step out of the
+                      office, review financial performance and work through the
+                      decisions that deserve more than a quick call.
                     </p>
                   </div>
                 </article>
@@ -240,10 +241,11 @@ export default function Home() {
                   <span className="label">BETWEEN MEETINGS</span>
                   <strong>06</strong>
                   <div>
-                    <h3>Keep the conversation moving.</h3>
+                    <h3>Keep the work moving.</h3>
                     <p>
-                      Six planned virtual working sessions, plus a private place
-                      to ask questions and follow through with your group.
+                      Six virtual council sessions between meetings, plus a
+                      private channel for your council. Bring back what you
+                      tried, what changed and where you’re stuck.
                     </p>
                   </div>
                 </article>
@@ -252,19 +254,19 @@ export default function Home() {
             <div className="deliverables">
               {[
                 [
-                  "01 / COMPARE",
-                  "Financial clarity",
-                  "A consistent way to look at revenue, labour, overhead and cash—so the discussion starts from common definitions.",
+                  "01 / OPEN THE BOOKS",
+                  "Understand the differences.",
+                  "Review revenue, direct labour, overhead and owner compensation using shared definitions. Explore what sits behind the differences between firms.",
                 ],
                 [
-                  "02 / DISCUSS",
-                  "Decisions with context",
-                  "Bring a real question. Hear how owners in the same profession have approached it. Decide what fits your firm.",
+                  "02 / WORK THE PROBLEM",
+                  "Put your thinking to the test.",
+                  "Bring a hiring, capacity or growth decision. Let other owners question the assumptions and share the trade-offs they’ve experienced.",
                 ],
                 [
                   "03 / FOLLOW THROUGH",
-                  "A reason to act",
-                  "Leave each session with a practical next step, and come back to people who will ask how it went.",
+                  "Turn the discussion into action.",
+                  "Choose a next step for your firm. Bring it back to the group, review what happened and work out what to change.",
                 ],
               ].map(([n, t, b]) => (
                 <div key={n}>
@@ -275,37 +277,43 @@ export default function Home() {
               ))}
             </div>
             <p className="micro format-note">
-              The founding group is in formation. Facilitator, meeting dates and
-              final membership terms will be confirmed before enrolment.
+              This is the planned founding format. Your group, facilitator,
+              meeting dates and final terms will be confirmed before you join.
             </p>
           </div>
         </section>
         <section className="section wrap membership" id="membership">
           <div className="membership-copy">
-            <p className="eyebrow">THE MEMBERSHIP</p>
+            <p className="eyebrow">THE QUALITY OF THE GROUP MATTERS</p>
             <h2>
-              Build a better firm.
+              A useful room starts
               <br />
-              <em>Keep your independence.</em>
+              <em>with the right owners.</em>
             </h2>
             <p>
-              Your business stays yours. This is a place to think clearly about
-              how you run it, with owners who understand what’s at stake.
+              Your peers are the reason to join. We’re looking for owners who
+              will prepare, speak openly about the business and make time to
+              help the other people at the table.
             </p>
             <ul className="check-list">
-              <li>Independent US surveying owners and operating partners</li>
-              <li>Particularly firms with multiple field crews</li>
-              <li>A willingness to share, listen and follow through</li>
+              <li>You own or help lead an independent US surveying firm</li>
+              <li>
+                You run an established business, often with several field crews
+              </li>
+              <li>
+                You’re willing to share financial summaries privately and
+                contribute
+              </li>
             </ul>
             <p className="micro">
-              We’re starting with established firms around $1m–$10m in annual
-              revenue. Apply if the idea resonates; group fit matters more than
-              a rigid cut-off.
+              Our starting focus is firms around $1m–$10m in annual revenue. We
+              review each application for fit. Service mix, business stage and
+              competitive overlap matter alongside size.
             </p>
           </div>
           <div className="price-card">
             <div className="price-heading">
-              <span className="eyebrow">PROPOSED FOUNDING MEMBERSHIP</span>
+              <span className="eyebrow">FOUNDING MEMBERSHIP · PROPOSED</span>
               <Brand compact />
             </div>
             <div className="price">
@@ -316,20 +324,20 @@ export default function Home() {
               Your travel and accommodation are separate.
             </p>
             <div className="price-includes">
-              <span>THE INTENDED MEMBERSHIP INCLUDES</span>
+              <span>THE PLANNED MEMBERSHIP</span>
               <ul>
-                <li>Two facilitated in-person meetings</li>
-                <li>Six virtual working sessions</li>
-                <li>Standardised financial comparisons</li>
-                <li>Ongoing access to your private group</li>
+                <li>Two in-person working meetings</li>
+                <li>Six virtual council sessions</li>
+                <li>A shared format for financial reviews</li>
+                <li>A private channel for your council</li>
                 <li>Meeting rooms and meeting-day catering</li>
               </ul>
             </div>
             <Link href="/apply" className="button full">
-              Apply for a founding place <Arrow />
+              Apply to join <Arrow />
             </Link>
             <p className="micro">
-              No payment to apply. Review the full details before deciding.
+              Free to apply. Confirm the group and full terms before you pay.
             </p>
           </div>
         </section>
@@ -337,34 +345,33 @@ export default function Home() {
         <section className="section wrap process" id="how-it-works">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">
-                A GOOD GROUP STARTS WITH THE RIGHT PEOPLE
-              </p>
+              <p className="eyebrow">A CONVERSATION BEFORE A COMMITMENT</p>
               <h2>
-                Find your <em>common ground.</em>
+                Let’s find <em>your people.</em>
               </h2>
             </div>
             <p>
-              A conversation first.
-              <br />A commitment only when it makes sense.
+              A small group takes care to put together.
+              <br />
+              Here’s how we’ll explore the fit.
             </p>
           </div>
           <div className="process-grid">
             {[
               [
                 "01",
-                "Tell us about your firm.",
-                "A short application covers your business, your market and the questions you want to work on.",
+                "Start with your firm.",
+                "Tell us what you do, where you work and the business question you’d most like to work through with other owners.",
               ],
               [
                 "02",
-                "Let’s explore the fit.",
-                "We review applications and contact potential members to discuss goals, group compatibility and expectations.",
+                "Have a real conversation.",
+                "We review your application and contact potential members to discuss the business, what you want from a council and what you’d bring to it.",
               ],
               [
                 "03",
-                "Choose your council.",
-                "If there’s a suitable match, you receive the group details, meeting plans and terms before deciding whether to join.",
+                "Decide when the group fits.",
+                "If there’s a compatible group, you receive the membership details, facilitator and meeting plans. Then you decide. Nothing is charged when you apply.",
               ],
             ].map(([n, t, b]) => (
               <article key={n}>
@@ -377,16 +384,15 @@ export default function Home() {
         </section>
         <section className="faq-section wrap" id="questions">
           <div>
-            <p className="eyebrow">A FEW GOOD QUESTIONS</p>
+            <p className="eyebrow">BEFORE YOU APPLY</p>
             <h2>
-              Before you
+              The questions
               <br />
-              <em>pull up a chair.</em>
+              <em>worth asking.</em>
             </h2>
             <p>
-              We’re building the first group carefully.
-              <br />
-              Here’s what to know.
+              A clear picture of the people, the commitment and how we’re
+              forming the first council.
             </p>
           </div>
           <div className="faq-list">
@@ -403,20 +409,24 @@ export default function Home() {
         </section>
         <section className="closing">
           <div className="wrap">
-            <p className="eyebrow">YOUR NEXT CHAPTER DESERVES GOOD COMPANY</p>
+            <p className="eyebrow">
+              A SMALL GROUP. A SERIOUS COMMITMENT TO EACH OTHER.
+            </p>
             <h2>
-              Survey the possibilities.
+              Bring the decision
               <br />
-              <em>Take a seat at the table.</em>
+              <em>you’ve been sitting with.</em>
             </h2>
             <p>
-              Help shape the founding council for independent surveying owners.
+              Apply to the founding council for independent US surveying owners.
+              Tell us about your firm and the conversation you wish you could
+              have.
             </p>
             <Link href="/apply" className="button">
-              Apply for the founding group <Arrow />
+              Apply to join <Arrow />
             </Link>
             <span className="micro">
-              A short application. A real conversation. No obligation.
+              Free to apply. No payment or membership commitment.
             </span>
           </div>
         </section>
