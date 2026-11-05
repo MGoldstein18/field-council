@@ -2,7 +2,7 @@
 import { useState } from "react";
 export default function MarginIllustration() {
   const [revenue, setRevenue] = useState(2000000);
-  const [points, setPoints] = useState(0.5);
+  const [points, setPoints] = useState(1);
   const dollars = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -12,15 +12,18 @@ export default function MarginIllustration() {
     <section className="margin-section">
       <div className="wrap margin-layout">
         <div>
-          <p className="eyebrow">SMALL CHANGES. REAL NUMBERS.</p>
+          <p className="eyebrow">WHY THE NUMBERS DESERVE A CLOSER LOOK</p>
           <h2>
-            What is a better
+            What would one
             <br />
-            decision <em>worth?</em>
+            margin point mean
+            <br />
+            <em>for your firm?</em>
           </h2>
           <p>
-            A small change in operating margin can matter more than another busy
-            month. Put your own numbers into perspective.
+            On $2 million in revenue, one percentage point of operating margin
+            is $20,000 a year. Use your own revenue below to see the difference
+            a small change would make.
           </p>
           <p className="micro">
             Illustration only. Membership does not guarantee a financial

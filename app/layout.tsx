@@ -9,14 +9,14 @@ export const metadata: Metadata = {
         : "http://localhost:3000"),
   ),
   title: {
-    default: "Field Council — A private table for surveying owners",
+    default: "Field Council — A peer council for surveying owners",
     template: "%s | Field Council",
   },
   description:
-    "A confidential peer council for independent US land-surveying firm owners. Compare financials, work through decisions and help shape the founding group.",
+    "A private peer council for independent US surveying owners. Compare financials, work through hiring and growth decisions, and apply to the founding group.",
   robots: { index: false, follow: false },
   openGraph: {
-    title: "You know your land. Know your business.",
+    title: "You run the firm. You don’t have to figure it out alone.",
     description:
       "A private peer group for independent surveying firm owners. Applications for the founding council are open.",
     type: "website",

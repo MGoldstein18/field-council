@@ -72,8 +72,9 @@ export function Footer() {
         <Brand />
       </Link>
       <p>
-        An independent perspective.
-        <br />A stronger business.
+        Owners helping owners
+        <br />
+        build stronger firms.
       </p>
       <div>
         <Link href="/privacy">Privacy & application information</Link>

@@ -2240,3 +2240,10 @@ svg {
 .admin-logout {
   margin: 24px 0;
 }
+
+/* Keep the longer owner-focused headline readable on narrow screens. */
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: clamp(44px, 13.2vw, 60px);
+  }
+}
