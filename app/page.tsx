@@ -32,7 +32,7 @@ const faqs = [
   ],
   [
     "What does membership cost?",
-    "The proposed founding price is US$4,500 per year, plus your travel and accommodation. That covers the planned two in-person meetings, six virtual working sessions, shared financial review format, private group access, meeting rooms and meeting-day catering. You’ll receive the facilitator details, dates and final terms before deciding or paying.",
+    "Regular membership is US$399 per month, billed annually at US$4,788. The current founding member discount is US$299 per month, billed annually at US$3,588. Travel and accommodation are separate. Membership covers the planned two in-person meetings, four virtual working sessions per year, shared financial review format, private group access, meeting rooms and meeting-day catering. You’ll receive the facilitator details, dates and final terms before deciding or paying.",
   ],
   [
     "Is the founding council already running?",
@@ -238,13 +238,13 @@ export default function Home() {
                 </article>
                 <article>
                   <span className="label">BETWEEN MEETINGS</span>
-                  <strong>06</strong>
+                  <strong>04</strong>
                   <div>
                     <h3>Keep the work moving.</h3>
                     <p>
-                      Six virtual council sessions between meetings, plus a
-                      private channel for your council. Bring back what you
-                      tried, what changed and where you’re stuck.
+                      Four virtual working sessions each year, plus a private
+                      channel for your council. Bring back what you tried, what
+                      changed and where you’re stuck.
                     </p>
                   </div>
                 </article>
@@ -312,13 +312,19 @@ export default function Home() {
           </div>
           <div className="price-card">
             <div className="price-heading">
-              <span className="eyebrow">FOUNDING MEMBERSHIP · PROPOSED</span>
+              <span className="eyebrow">FOUNDING MEMBER DISCOUNT</span>
               <Brand compact />
             </div>
             <div className="price">
-              <span className="currency">US$</span>4,500
-              <span className="per">/ year</span>
+              <span className="currency">US$</span>299
+              <span className="per">/ month</span>
             </div>
+            <p className="travel">
+              <strong>US$3,588 billed annually.</strong>
+            </p>
+            <p className="travel">
+              Regular price: US$399/month, billed annually at US$4,788.
+            </p>
             <p className="travel">
               Your travel and accommodation are separate.
             </p>
@@ -326,7 +332,7 @@ export default function Home() {
               <span>THE PLANNED MEMBERSHIP</span>
               <ul>
                 <li>Two in-person working meetings</li>
-                <li>Six virtual council sessions</li>
+                <li>Four virtual working sessions per year</li>
                 <li>A shared format for financial reviews</li>
                 <li>A private channel for your council</li>
                 <li>Meeting rooms and meeting-day catering</li>

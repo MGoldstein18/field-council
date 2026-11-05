@@ -14,8 +14,8 @@ These are our applications of their principles, not endorsements or copied progr
 
 1. Clear surveying-owner positioning and application CTA.
 2. Familiar owner questions: pricing, capacity, profit and cash.
-3. Specific mechanism: 10–12 owners, separate markets, comparable financial summaries, two proposed in-person meetings and six virtual sessions.
-4. Proposed US$4,500 annual price, with travel/accommodation separate and no application payment.
+3. Specific mechanism: 10–12 owners, separate markets, comparable financial summaries, two proposed in-person meetings and four virtual working sessions.
+4. Regular price of US$399/month billed annually (US$4,788/year), with a current founding discount of US$299/month billed annually (US$3,588/year), with travel/accommodation separate and no application payment.
 5. Interactive margin illustration, clearly labelled as arithmetic rather than a result claim.
 6. Application → fit conversation → compatible group → decision.
 7. FAQs, including confidentiality, competition, launch timing and optional public interviews.
@@ -62,7 +62,7 @@ The earlier page described a pleasant community but left too much of the commerc
 - Replace vague benefit headings with concrete discussions about profitability, hiring/capacity and owner dependence.
 - Make the meeting mechanism visible: review the numbers, work the problem, choose a next action.
 - Treat the people and their willingness to contribute as the membership’s main value. Keep eligibility and market-overlap review explicit.
-- Keep the existing visual identity, proposed $4,500 annual fee, two in-person meetings, six virtual sessions and travel arrangements. Consolidate formation caveats into the format, pricing and relevant FAQs.
+- Keep the existing visual identity, regular US$399/month and founding US$299/month pricing, both billed annually, two in-person meetings, four virtual working sessions and travel arrangements. Consolidate formation caveats into the format, pricing and relevant FAQs.
 - Preserve the arithmetic illustration, defaulting to one margin point, and label it as an illustration rather than a member result or forecast.
 - Keep application CTAs consistent. Align the application introduction, footer and metadata with the new proposition.
 - No borrowed testimonials, invented member outcomes, founder credentials, acceptance statistics, membership counts, guarantees or countdowns. No change to the email backend.
