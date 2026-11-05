@@ -393,10 +393,11 @@ export default function ApplicationForm() {
                 ))}
               </dl>
               <div className="review-terms">
-                Proposed membership:{" "}
-                <strong>US$4,500 per year + travel and accommodation.</strong>{" "}
-                No payment is collected now. Group details and terms will be
-                shared before you decide.
+                Founding member rate:{" "}
+                <strong>US$299/month, billed annually at US$3,588.</strong>{" "}
+                Regular pricing is US$399/month, billed annually at US$4,788.
+                Travel and accommodation are separate. No payment is collected
+                now. Group details and terms will be shared before you decide.
               </div>
               <label className="consent">
                 <input
