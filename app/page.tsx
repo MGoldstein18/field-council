@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Arrow, Brand, Footer, Header, SurveyMap } from "./shared";
-import MarginIllustration from "./margin-illustration";
 const questions = [
   [
     "01",
@@ -341,7 +340,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <MarginIllustration />
         <section className="section wrap process" id="how-it-works">
           <div className="section-heading">
             <div>
