@@ -24,9 +24,9 @@ The design carries forward the earlier website project's large typography, warm 
 
 ## Application workflow
 
-Three stages: contact/company/location; revenue/team/service/territory/problem; review/consent. Durable PostgreSQL storage and a server-issued reference only after a successful save. Idempotent retries use a client-generated UUID. Server validation, honeypot, bounded bodies, connection-based rate limits and same-origin writes. Failures retain the form and offer retry.
+Three stages: contact/company/location; revenue/team/service/territory/problem; review/consent. Applications emailed to the organiser, with a reference acknowledged only after the email provider accepts the message. Retries use a client-generated UUID and Resend’s 24-hour idempotency window. Server validation, honeypot, bounded bodies, best-effort, per-instance connection limits and same-origin writes. Failures retain the form and offer retry. No application database is required.
 
-Owner-only `/admin` supports search, stage filtering, notes, stage updates and CSV export. Fit-call email opens in the organiser's own mail application for review. Neither status changes nor form submissions send email. Booking is manual. No payment provider, automatic acceptance, calendar integration or email service is implied.
+Applications are reviewed in the organiser’s email inbox. Replying to the email contacts the applicant. There is no admin dashboard, database, CSV export, automated acceptance, calendar integration or payment collection.
 
 ## Demand experiment
 
@@ -40,4 +40,4 @@ Owner-only `/admin` supports search, stage filtering, notes, stage updates and C
 
 ## Preview versus launch
 
-The marketing pages are accessible to visitors; organiser data and the dashboard require password authentication. Search indexing remains disabled for the founding preview. Public contact email and booking link are placeholders at the user's request. Public contact/retention details should be completed when preparing the public launch. The application backend requires the database setup documented in README.md before collecting applications. Do not present this as already populated or as a launched member community.
+The marketing pages are accessible to visitors; application details are emailed privately to the organiser. Search indexing remains disabled for the founding preview. Public contact email and booking link are placeholders at the user's request. Public contact/retention details should be completed when preparing the public launch. The application backend requires the email setup documented in README.md before collecting applications. Do not present this as already populated or as a launched member community.
