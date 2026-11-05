@@ -1,0 +1,81 @@
+import type { Metadata } from "next";
+import { Header, Footer } from "../shared";
+export const metadata: Metadata = {
+  title: "Privacy & application information",
+};
+export default function Privacy() {
+  return (
+    <>
+      <Header simple />
+      <main id="main" className="legal wrap">
+        <p className="eyebrow">LAST UPDATED · 5 NOVEMBER 2026</p>
+        <h1>
+          Privacy &<br />
+          <em>application information.</em>
+        </h1>
+        <p>
+          Field Council is a new independent surveying-owner community in
+          formation. This private preview collects applications so the organiser
+          can review potential members and form compatible groups.
+        </p>
+        <h2>What the application collects</h2>
+        <p>
+          Your name, contact details, company, role, location, service area,
+          broad revenue and team-size bands, services, business question and
+          willingness to share financial summaries privately. Website and phone
+          are optional. We also record the application date, contact consent,
+          review status, organiser notes and any campaign reference supplied
+          with the link.
+        </p>
+        <h2>How the information is used</h2>
+        <p>
+          To review applications, assess potential group fit and competitive
+          overlap, contact applicants about the application or group formation,
+          and manage the membership selection process. Submitting the
+          application does not subscribe you to unrelated marketing or commit
+          you to membership.
+        </p>
+        <h2>Storage and access</h2>
+        <p>
+          Applications are stored in a private PostgreSQL database. The
+          organiser’s review area requires authorised sign-in. Application
+          records are not published to other applicants or shared with a
+          proposed group without discussing that with you first. Hosting
+          services process information needed to operate the site. No
+          advertising pixels are included.
+        </p>
+        <h2>Application security</h2>
+        <p>
+          Please do not submit accounts, client names, bank details or other
+          sensitive records. When available, a temporary hash of a connection
+          identifier is used to limit automated submissions; these rate-limit
+          records are cleared after 24 hours during subsequent application or
+          login activity.
+        </p>
+        <h2>Your choices</h2>
+        <p>
+          You can decline membership, withdraw your application or request
+          correction or deletion. Applicant contact and retention arrangements
+          will be finalised before a public launch. No fixed deletion period is
+          currently automated.
+        </p>
+        <h2>Contact details</h2>
+        <p>
+          <strong>Placeholder for launch:</strong> organiser contact email and
+          scheduling link have not yet been supplied. This preview does not
+          contain a working public contact address or automated call booking.
+        </p>
+        <h2>What applying means</h2>
+        <p>
+          Applying is free. It records interest in the proposed founding group
+          and permits application-related contact. A place, meeting date or
+          membership is not guaranteed. Membership pricing, dates, facilitator,
+          confidentiality arrangements and final terms will be confirmed before
+          any enrolment or payment. Public interviews or case studies would
+          require separate permission.
+        </p>
+      </main>
+      <Footer />
+    </>
+  );
+}
